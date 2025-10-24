@@ -1,0 +1,79 @@
+2025-06-14 23:16:58,084 - INFO:Acceso al sitio del SAT, intento-opinion: SAGF8705279C8
+2025-06-14 23:17:02,410 - INFO:Seteo path del cert
+2025-06-14 23:17:05,456 - INFO:Seteo path del key
+2025-06-14 23:17:06,695 - INFO:Seteo password
+2025-06-14 23:17:14,868 - INFO:Click Acceso
+2025-06-14 23:21:34,831 - INFO:Acceso al sitio del SAT, intento-opinion: SAGF8705279C8
+2025-06-14 23:21:37,919 - INFO:Seteo path del cert
+2025-06-14 23:21:40,970 - INFO:Seteo path del key
+2025-06-14 23:21:42,219 - INFO:Seteo password
+2025-06-14 23:21:49,940 - INFO:Click Acceso
+2025-06-14 23:21:54,953 - ERROR:Se excedió el tiempo de espera del sitio
+2025-06-14 23:25:22,481 - INFO:Acceso al sitio del SAT, intento-opinion: SAGF8705279C8
+2025-06-14 23:25:25,573 - INFO:Seteo path del cert
+2025-06-14 23:25:28,623 - INFO:Seteo path del key
+2025-06-14 23:25:29,872 - INFO:Seteo password
+2025-06-14 23:25:36,765 - INFO:Click Acceso
+2025-06-14 23:27:59,306 - INFO:Acceso al sitio del SAT, intento-opinion: SAGF8705279C8
+2025-06-14 23:28:02,395 - INFO:Seteo path del cert
+2025-06-14 23:28:05,443 - INFO:Seteo path del key
+2025-06-14 23:28:06,701 - INFO:Seteo password
+2025-06-14 23:28:16,140 - INFO:Click Acceso
+2025-06-14 23:35:45,793 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:35:48,871 - ERROR:Se excedió el tiempo de espera del sitio
+2025-06-14 23:36:21,769 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:36:24,844 - ERROR:Se excedió el tiempo de espera del sitio
+2025-06-14 23:36:46,227 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:36:49,306 - ERROR:Se excedió el tiempo de espera del sitio
+2025-06-14 23:37:34,706 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:38:22,170 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:38:54,171 - ERROR:Se excedió el tiempo de espera del sitioMessage: invalid argument: File not found : /Users/garfiaspro/Dropbox/FIEL_SAGF8705279C8_20190131113307/ACR140408T34/certificado.cer
+  (Session info: chrome=137.0.7151.104)
+Stacktrace:
+0   chromedriver                        0x000000010932f7a8 chromedriver + 5892008
+1   chromedriver                        0x0000000109326efa chromedriver + 5857018
+2   chromedriver                        0x0000000108df7400 chromedriver + 418816
+3   chromedriver                        0x0000000108e41a22 chromedriver + 723490
+4   chromedriver                        0x0000000108e6f4e2 chromedriver + 910562
+5   chromedriver                        0x0000000108e3ccc8 chromedriver + 703688
+6   chromedriver                        0x0000000108e6f69e chromedriver + 911006
+7   chromedriver                        0x0000000108e97073 chromedriver + 1073267
+8   chromedriver                        0x0000000108e6f2b3 chromedriver + 910003
+9   chromedriver                        0x0000000108e3b507 chromedriver + 697607
+10  chromedriver                        0x0000000108e3c171 chromedriver + 700785
+11  chromedriver                        0x00000001092ed550 chromedriver + 5621072
+12  chromedriver                        0x00000001092f14df chromedriver + 5637343
+13  chromedriver                        0x00000001092c8962 chromedriver + 5470562
+14  chromedriver                        0x00000001092f1e4f chromedriver + 5639759
+15  chromedriver                        0x00000001092b7124 chromedriver + 5398820
+16  chromedriver                        0x0000000109314708 chromedriver + 5781256
+17  chromedriver                        0x00000001093148d0 chromedriver + 5781712
+18  chromedriver                        0x0000000109326ac1 chromedriver + 5855937
+19  libsystem_pthread.dylib             0x00007ff808292df1 _pthread_start + 99
+20  libsystem_pthread.dylib             0x00007ff80828e857 thread_start + 15
+
+2025-06-14 23:39:49,011 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:39:52,111 - INFO:Seteo path del cert
+2025-06-14 23:39:55,161 - INFO:Seteo path del key
+2025-06-14 23:39:56,329 - INFO:Seteo password
+2025-06-14 23:40:04,010 - INFO:Click Acceso
+2025-06-14 23:47:04,206 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:47:07,298 - INFO:Seteo path del cert
+2025-06-14 23:47:10,344 - INFO:Seteo path del key
+2025-06-14 23:47:11,555 - INFO:Seteo password
+2025-06-14 23:47:13,189 - INFO:Click Acceso
+2025-06-14 23:48:04,502 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-14 23:48:07,957 - INFO:Seteo path del cert
+2025-06-14 23:48:11,001 - INFO:Seteo path del key
+2025-06-14 23:48:12,226 - INFO:Seteo password
+2025-06-14 23:48:18,913 - INFO:Click Acceso
+2025-06-16 15:20:16,196 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-16 15:20:19,292 - INFO:Seteo path del cert
+2025-06-16 15:20:22,340 - INFO:Seteo path del key
+2025-06-16 15:20:23,611 - INFO:Seteo password
+2025-06-16 15:20:33,982 - INFO:Click Acceso
+2025-06-16 21:38:41,634 - INFO:Acceso al sitio del SAT, intento-opinion: ACR140408T34
+2025-06-16 21:38:44,724 - INFO:Seteo path del cert
+2025-06-16 21:38:47,766 - INFO:Seteo path del key
+2025-06-16 21:38:49,003 - INFO:Seteo password
+2025-06-16 21:38:50,332 - INFO:Click Acceso
