@@ -22,7 +22,7 @@ def getdeclaraanualpagada(rfc_c:str,inicial:int,final:int):
     archivos = []
     resultados = {}
     rfc = rfc_c
-    descarga = "/root/"+rfc+"/DAP"
+    descarga = "/repository/"+rfc+"/DAP"
     folder_path = Path(descarga)
     folder_path.mkdir(parents=True, exist_ok=True)
     for file in pathlib.Path(descarga).glob('*.*'):

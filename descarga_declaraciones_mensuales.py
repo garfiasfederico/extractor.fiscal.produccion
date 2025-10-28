@@ -7,7 +7,7 @@ import threading
 log = Log("logs/extractor.log")
 
 def getfilesdm(rfc,inicio,final,repo):    
-    path_descarga = "/root/"+rfc+"/"+repo
+    path_descarga = "/repository/"+rfc+"/"+repo
     log.write("info",f" {rfc} - Descarga de archivos Declaraciones Provisionales "+repo)
     if(os.path.exists(path_descarga)):
         resultados = {}

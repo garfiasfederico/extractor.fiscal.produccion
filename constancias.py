@@ -21,7 +21,7 @@ log = Log("logs/extractor.log")
 def getcsf(response,rfc_c:str):
     archivos = []
     rfc = rfc_c
-    descarga = "/root/"+rfc+"/CSF"
+    descarga = "/repository/"+rfc+"/CSF"
     folder_path = Path(descarga)
     folder_path.mkdir(parents=True, exist_ok=True)
     for file in pathlib.Path(descarga).glob('*.*'):

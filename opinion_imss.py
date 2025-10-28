@@ -22,7 +22,7 @@ log = Log("logs/extractor.log")
 def getopinionimss(contenedor,rfc_c:str):
     resultados = {}
     rfc = rfc_c
-    descarga = "/root/"+rfc+"/IMSS"
+    descarga = "/repository/"+rfc+"/IMSS"
     folder_path = Path(descarga)
     folder_path.mkdir(parents=True, exist_ok=True)
     for file in pathlib.Path(descarga).glob('*.*'):
