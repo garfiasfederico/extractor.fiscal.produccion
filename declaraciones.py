@@ -22,7 +22,7 @@ def getdeclaraanuales(rfc_c:str,inicial:int,final:int):
     archivos = []
     resultados = {}
     rfc = rfc_c
-    descarga = "/repository/"+rfc+"/DA"
+    descarga = "/root/repository/"+rfc+"/DA"
     folder_path = Path(descarga)
     folder_path.mkdir(parents=True, exist_ok=True)
     for file in pathlib.Path(descarga).glob('*.*'):

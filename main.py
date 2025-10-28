@@ -147,7 +147,7 @@ async def upload_opinion(rfc:str,file_:UploadFile = File(...)):
     getdatacompany.getDataCompany(rfc)
     if(getdatacompany.contribuyente!=""):
         if file_.content_type == "application/pdf" and file_.size<1048576:
-            descarga = "/repository/"+rfc+"/INFONAVIT"
+            descarga = "/root/repository/"+rfc+"/INFONAVIT"
             #descarga = "E:\\SAT\\"+rfc+"\\INFONAVIT"    
             folder_path = Path(descarga)
             folder_path.mkdir(parents=True, exist_ok=True)
@@ -173,7 +173,7 @@ async def upload_opinion(rfc:str,file_:UploadFile = File(...)):
 async def download_opinion(rfc:str):
     getdatacompany.getDataCompany(rfc)
     if(getdatacompany.contribuyente!=""):    
-        descarga = "/repository/"+rfc+"/INFONAVIT"
+        descarga = "/root/repository/"+rfc+"/INFONAVIT"
         path_opinion = descarga+"/"+"constancia_infonavit.pdf"
         contenido = ""
         if(os.path.exists(path_opinion)):
@@ -188,7 +188,7 @@ async def download_opinion(rfc:str):
 @app.post("/main/registracontribuyente")
 async def registra_contribuyente(rfc:str,cert:UploadFile = File(...),key:UploadFile = File(...),passwd:str=None):
     #seteamos carpeta de CSD del contribuyente
-    path_csd = "/repository/"+rfc+"/CSD"
+    path_csd = "/root/repository/"+rfc+"/CSD"
     errors = []
     if not(os.path.exists(path_csd)):
         folder_path = Path(path_csd)
