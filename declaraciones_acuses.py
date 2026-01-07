@@ -136,9 +136,19 @@ def getdeclaraanualesacuses(rfc_c:str,inicial:int,final:int):
             anios.append(x)
 
         moral2019 = 0;
+        portal_nuevo = 0
         for i in anios:
             if i > 2018 and persona=="moral":
+                portal_nuevo = portal_nuevo + 1
                 if moral2019==0:           
+                    #si la sesión está abierta para el consumo del portal anterior la cerramos
+                    try:
+                        WebDriverWait(driver,10)\
+                            .until(EC.element_to_be_clickable((By.ID,
+                                                        'LogOut')))\
+                                                        .click()  
+                    except:
+                        pass
                     #accedemos al nuevo sitio de declaraciones que tiene la repo de los anios 2019 en adelante
                     driver.get('https://anualpm.clouda.sat.gob.mx/MoralesV2')
                     #WebDriverWait(driver, 10).until(EC.url_to_be("https://anualpm.clouda.sat.gob.mx/MoralesV2"))
@@ -151,11 +161,47 @@ def getdeclaraanualesacuses(rfc_c:str,inicial:int,final:int):
                     #     .until(EC.element_to_be_clickable((By.XPATH,
                     #                                 '/html/body/nav/div/div/ul[1]/li[2]/div/a[1]')))\
                     #                                 .click()
+                    if(portal_nuevo==1):
+                        WebDriverWait(driver, 10)\
+                            .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                    'button#buttonFiel')))\
+                                            .click()
+                        log.write("info",f"{rfc} - Click en acceso por fiel al portal 2019 Acuses declaraciones")
+                        time.sleep(2);                                          
+                        js = "document.getElementById('fileCertificate').style.display = 'block';"
+                        driver.execute_script(js)
+                        WebDriverWait(driver, 15)\
+                            .until(EC.element_to_be_clickable((By.XPATH,
+                                                            '/html/body/main/div/div/div[1]/form/div[1]/div/input[2]')))\
+                            .send_keys(getdatacompany.path_cert)
+                        log.write("info",f"{rfc} - Seteo path del cert")
+                        time.sleep(3);
+                        js = "document.getElementById('filePrivateKey').style.display = 'block';"
+                        driver.execute_script(js)
+                        WebDriverWait(driver, 15)\
+                            .until(EC.element_to_be_clickable((By.XPATH,
+                                                            '/html/body/main/div/div/div[1]/form/div[2]/div/input[2]')))\
+                            .send_keys(getdatacompany.path_key)
+                        log.write("info",f"{rfc} - Seteo path del key")
+                        time.sleep(1);
+                        WebDriverWait(driver, 5)\
+                            .until(EC.element_to_be_clickable((By.XPATH,
+                                                            '/html/body/main/div/div/div[1]/form/div[3]/input')))\
+                            .send_keys(getdatacompany.password_fiel)
+                        log.write("info",f"{rfc} - Seteo password")
+
+                        time.sleep(1);
+
+                        WebDriverWait(driver,10)\
+                        .until(EC.element_to_be_clickable((By.XPATH,
+                                                        '/html/body/main/div/div/div[1]/form/div[5]/div/input[2]')))\
+                                                        .click()
+                        log.write("info",f"{rfc} - Click Acceso Acuses declaraciones Anuales")
                     time.sleep(3)
                     driver.get('https://anualpm.clouda.sat.gob.mx/MoralesV2/Consulta/Consulta?tipoDocumento=3')
                     time.sleep(3)
                     moral2019=1
-                
+
                                                             
                 #comenzamos a iterar en las declaracion a partir del 2019
                 select_2 = Select(WebDriverWait(driver,10)\
