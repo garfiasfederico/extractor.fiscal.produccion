@@ -224,7 +224,7 @@ def getdeclaraanualpagada(rfc_c:str,inicial:int,final:int):
                 #sino existen declaraciones clickeamos el boton de cerrar en la ventana de resultado que informa que no existen declaraciones
                 if len(declaraciones_news)==0:
                     WebDriverWait(driver,5)\
-                        .until(EC.element_to_be_clickable((By.XPATH,"/html/body/div[12]/div/div/div[3]/button")))\
+                        .until(EC.element_to_be_clickable((By.XPATH,"/html/body/div[13]/div/div/div[3]/button")))\
                                                     .click()
                 else:
                     #si existen declaraciones que descargar entonces comenzamos a iterar en la tabla correspodiente para la descarga de todas las declaraciones 
